@@ -45,8 +45,8 @@ public:
     void addEdge(vertex &u, vertex &v, int w){
         u.addEdge(&v, w);
     }; 
-    void dijkstra(vertex* s){
-        initSS(s);
+    void dijkstra(vertex &s){
+        initSS(&s);
         priority_queue<vertex*, vector<vertex*>, comp> Q;
         for(auto u: vertices){
             Q.push(u);

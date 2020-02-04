@@ -7,6 +7,23 @@ using namespace std;
 int main(){
     graph G;
     vertex s, t, x, y, z;
+    vertex A, B, C;
+
+    G.addVertex(A);
+    G.addVertex(B);
+    G.addVertex(C);
+
+    G.addEdge(A, C, 2);
+    G.addEdge(A, B, 5);
+    G.addEdge(B, C, -10);
+
+    G.dijkstra(A);
+
+    cout << "A: "<<A.dist<<endl;
+    cout << "B: " << B.dist << endl;
+    cout << "C: " << C.dist << endl;
+
+    /*
     
     G.addVertex(s);
     G.addVertex(t);
@@ -31,6 +48,7 @@ int main(){
     cout << "x: " << x.dist << endl;
     cout << "y: " << y.dist << endl;
     cout << "z: " << z.dist << endl;
+    */
 
     return 0;
 }
